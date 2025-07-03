@@ -1,34 +1,39 @@
-# Conway's Game of Life (Python Implementation with Visualization & Benchmarking)
+# Conway's Game of Life (Python Implementation)
 
 This project implements **Conway's Game of Life** in Python, with support for interactive GUI visualization and optimized performance via Numba for parallel execution.
 
-It also includes a **performance tester** to compare execution time across different grid sizes.
+It also includes a performance analisis to compare execution time across different grid sizes, profiling and scaling.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
-├── main.py            # Base implementation (no parallelism)
-├── main_numba.py      # Optimized version using Numba parallel loops
-├── performance_tester.py # Benchmarks different grid sizes and plots results
-├── README.md          # Project documentation (this file)
+├── main.py               # Base implementation (no parallelism)
+├── main_numba.py         # Optimized version using Numba parallel loops
+├── performance_test.py # Benchmarks different grid sizes and plots results
+├── profile_test.py       # Performance profiling with cProfile and line_profiler
+├── scaling_test.py       # Strong and weak scaling analysis
+├── performance.md        # Report summarizing all performance analysis
+├── results/              # Folder containing images and .txt result files
+├── README.md             # Project documentation (this file)
+
 ```
 
 ---
 
-## 🧪 Requirements
+## Requirements
 
 Install dependencies using pip:
 
 ```bash
-pip install matplotlib numpy numba
+pip install matplotlib numpy numba line_profiler
 ```
 
 ---
 
-## 🚀 Running the Game
+## Running the Game
 
 ### 1. **Standard (non-parallel) version**
 
@@ -58,10 +63,10 @@ Same controls and prompts as the standard version, but optimized for faster comp
 
 ---
 
-## 📊 Benchmarking Performance
+## Benchmarking Performance
 
 ```bash
-python performance_tester.py
+python performance_test.py
 ```
 
 - You will be prompted to enter the number of steps to simulate.
@@ -75,17 +80,34 @@ python performance_tester.py
 
 ---
 
-## ✅ Features
+## Profiling Performance
+
+```bash
+python profile_test.py
+```
+
+- Uses cProfile and line_profiler to identify bottlenecks in key functions.
+- Results stored in results/ for further inspection.
+
+---
+
+## Scaling Performance
+
+```bash
+python scaling_test.py
+```
+
+- Evaluates both strong and weak scaling.
+- Results saved in text and graphical format under results/.
+
+---
+
+
+## Features
 
 - Interactive GUI with matplotlib animation
 - Mouse + keyboard controls
 - Configurable grid size and random initialization
 - Numba-accelerated update step with parallelization
-- Performance benchmarking + visual plots
-
----
-
-## 🔧 Troubleshooting
-
-- If animation or click interaction fails, ensure you are using a Python environment with GUI support (e.g., not headless terminal).
-- To avoid Numba JIT compile time in benchmarks, consider pre-warming with a dummy step before timing.
+- Benchmarking, profiling, and scalability analysis
+- Organized result output in /results folder

@@ -1,0 +1,19 @@
+         183501201 function calls in 137.080 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      100   40.781    0.408  137.080    1.371 c:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\main.py:51(step)
+ 26214400   18.726    0.000   93.788    0.000 C:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\venv\Lib\site-packages\numpy\_core\fromnumeric.py:2338(sum)
+ 26214400   22.060    0.000   72.814    0.000 C:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\venv\Lib\site-packages\numpy\_core\fromnumeric.py:69(_wrapreduction)
+ 26214400   37.506    0.000   37.506    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+ 26214400   11.438    0.000   11.438    0.000 C:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\venv\Lib\site-packages\numpy\_core\fromnumeric.py:70(<dictcomp>)
+ 26214400    2.493    0.000    2.493    0.000 C:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\venv\Lib\site-packages\numpy\_core\fromnumeric.py:2333(_sum_dispatcher)
+ 26214400    2.248    0.000    2.248    0.000 {built-in method builtins.isinstance}
+ 26214400    1.809    0.000    1.809    0.000 {method 'items' of 'dict' objects}
+      100    0.000    0.000    0.018    0.000 C:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\venv\Lib\site-packages\numpy\lib\_function_base_impl.py:898(copy)
+      100    0.018    0.000    0.018    0.000 {built-in method numpy.array}
+      100    0.000    0.000    0.000    0.000 C:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\venv\Lib\site-packages\numpy\lib\_function_base_impl.py:894(_copy_dispatcher)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

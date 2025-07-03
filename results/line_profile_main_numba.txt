@@ -1,0 +1,14 @@
+Timer unit: 1e-07 s
+
+Total time: 0.0028178 s
+File: c:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\main_numba.py
+Function: step at line 86
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    86                                               def step(self):
+    87                                                   """
+    88                                                   Advance the game state by one iteration using compute_next_state().
+    89                                                   """
+    90         2      28178.0  14089.0    100.0          self.grid = compute_next_step(self.grid)
+

@@ -1,0 +1,33 @@
+Timer unit: 1e-07 s
+
+Total time: 5.52756 s
+File: c:\Users\natha\OneDrive\Bureau\Juego de la vida de Conway\main.py
+Function: step at line 51
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    51                                               def step(self):
+    52                                                   """
+    53                                                   Compute the next generation of the Game of Life grid.
+    54                                           
+    55                                                   Parameters:
+    56                                                   - grid (np.ndarray): Current state of the grid (2D array of 0s and 1s).
+    57                                           
+    58                                                   Returns:
+    59                                                   - np.ndarray: Updated grid after applying Game of Life rules.
+    60                                                   """
+    61         2       3479.0   1739.5      0.0          new_grid = np.copy(self.grid)
+    62      1026       2337.0      2.3      0.0          for x in range(self.rows):
+    63    525312    1611290.0      3.1      2.9              for y in range(self.cols):
+    64   1572864   40588303.0     25.8     73.4                  total = np.sum(
+    65   1048576    4694859.0      4.5      8.5                      self.grid[(x-1)%self.rows:(x+2)%self.rows,
+    66    524288    2313466.0      4.4      4.2                                (y-1)%self.cols:(y+2)%self.cols]
+    67    524288    1956653.0      3.7      3.5                  ) - self.grid[x, y]
+    68                                           
+    69    524288    2458051.0      4.7      4.4                  if self.grid[x, y] == 1:
+    70     45030     158818.0      3.5      0.3                      if total < 2 or total > 3:
+    71     16644      69777.0      4.2      0.1                          new_grid[x, y] = 0
+    72    479258    1348933.0      2.8      2.4                  elif total == 3:
+    73     16608      69635.0      4.2      0.1                      new_grid[x, y] = 1
+    74         2         35.0     17.5      0.0          self.grid = new_grid
+
